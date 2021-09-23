@@ -17,3 +17,23 @@ Stack trace:
 #6 C:\Users\jaytu\Local Sites\ in C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-includes\script-loader.php on line 2371
 [16-Sep-2021 23:40:51 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 13
 [16-Sep-2021 23:40:51 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-content\themes\fictional-university-theme\functions.php on line 13
+[23-Sep-2021 19:28:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function asdf() in C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-content\mu-plugins\university-post-types.php:17
+Stack trace:
+#0 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(303): university_post_types('')
+#1 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-settings.php(578): do_action('init')
+#4 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-config.php(77): require_once('C:\\Users\\jaytu\\...')
+#5 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\jaytu\\...')
+#6 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\jaytu\\...')
+#7 C:\Users in C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-content\mu-plugins\university-post-types.php on line 17
+[23-Sep-2021 19:28:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function asdf() in C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-content\mu-plugins\university-post-types.php:17
+Stack trace:
+#0 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(303): university_post_types('')
+#1 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-settings.php(578): do_action('init')
+#4 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-config.php(77): require_once('C:\\Users\\jaytu\\...')
+#5 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-load.php(50): require_once('C:\\Users\\jaytu\\...')
+#6 C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-blog-header.php(13): require_once('C:\\Users\\jaytu\\...')
+#7 C:\Users in C:\Users\jaytu\Local Sites\fictional-university\app\public\wp-content\mu-plugins\university-post-types.php on line 17
