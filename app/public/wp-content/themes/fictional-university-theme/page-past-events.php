@@ -4,7 +4,7 @@
   <div class="page-banner__bg-image" style="background-image: url(<?= get_theme_file_uri('images/ocean.jpg') ?>)"></div>
   <div class="page-banner__content container container--narrow">
     <h1 class="page-banner__title">
-      All Events
+      Past Events
     </h1>
     <div class="page-banner__intro">
       <p>See what is going on in our world</p>
@@ -13,8 +13,26 @@
 </div>
 
 <div class="page-section container container--narrow">
-  <?php while (have_posts()) : ?>
-    <?php the_post(); ?>
+  <?php
+  $today = date('Ymd');
+  $past_events = new WP_Query(array(
+      'paged' => get_query_var('paged', 1),
+      'post_type' => 'event',
+      'meta_key' => 'event_date',
+      'orderby' => 'meta_value_num',
+      'order' => 'ASC',
+      'meta_query' => array(
+          array(
+              'key' => 'event_date', 
+              'compare' => '<',
+              'value' => $today,
+              'type' => 'numeric'
+          )
+      )
+  ));
+  ?>
+  <?php while ($past_events->have_posts()) : ?>
+    <?php $past_events->the_post(); ?>
     <div class="event-summary">
       <a class="event-summary__date t-center" href="#">
         <span class="event-summary__month"><?php 
@@ -33,8 +51,8 @@
     </div>
   <?php endwhile; ?>
 
-  <?php echo paginate_links(); ?>
+  <?php echo paginate_links(array(
+      'total' => $past_events->max_num_pages
+  )); ?>
 
-  <hr class="section-break" />
-  <p>Looing for a recap of past events? <a href="<?= site_url('/past-events') ?>">Check out our past events archive</a></p>
   <?php get_footer(); ?>
